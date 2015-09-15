@@ -1,0 +1,62 @@
+.navbar-default{
+      background-color: #610B0B;
+      color: #070719;
+    }
+    .navbar-default .navbar-toggle{
+      border-color: #070719;
+    }
+        .table-hover tbody tr:hover td,.table-hover tbody tr:hover th{
+          color: #070719;
+        }
+        th{
+          text-align: center;
+          color:#800E0E ;
+        }    
+        td{
+          text-align: center;
+        }
+        h1{
+          color: #F2F2F2;
+        }
+        h2{
+          color: #070719;
+        }
+        .featurette-divider {
+          margin: 80px 0;
+        }
+        img, img.img-responsive {
+            margin: 0 auto;
+        }
+        .carousel .item {
+            height: 500px;
+            background-color: #610B0B;
+            color: #F2F2F2;
+        }
+
+        body {
+          color: #F2F2F2;
+          position: relative;
+        }
+
+        body {
+          padding-top: 50px;
+        }
+
+        .tab-pane{
+          margin: 20px 0;
+        }
+
+        .popover{
+          color:#070719;
+          background-color: #610B0B;
+        }
+         body {
+          background-color: #1D2943;
+        }
+        .jumbotron{
+          background-color: #610B0B!important;
+
+        }
+    .amazingcarousel-item{
+        background-color: #610B0B;
+    }

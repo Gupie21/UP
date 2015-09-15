@@ -5,487 +5,256 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Bootstrap CSS</title>
-  <!-- Latest compiled and minified CSS -->
+
+  <title>Gupie</title>
+
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css">
+
+  <link rel="shortcut icon" href="Dragnusico.ico"> <link rel="shortcut icon" href="Dragnusico.gif">
+  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-      <![endif]-->
-      <style>
-        .featurette-divider {
-          margin: 80px 0;
-        }
-        img, img.img-responsive {
-            margin: 0 auto;
-        }
-        .carousel .item {
-            height: 500px;
-            background-color: #777;
-        }
-        /* Required for scrollspy to work*/
-        body {
-          position: relative;
-        }
-        /* The fixed navbar will overlay your other content, unless you add padding to the top of the <body>. Try out your own values or use our snippet below. Pro Tip: By default, the navbar is 50px high.*/
-        body {
-          padding-top: 50px;
-        }
-        /* Hotfix the panes with 20px on top*/
-        .tab-pane{
-          margin: 20px 0;
-        }
-      </style>
-    </head>
-    <body data-spy="scroll" data-target="#scrollspy">
-    <!--
-      1. Carousel
-      1.1 Ve a la siguiente página http://getbootstrap.com/javascript/#carousel y analiza el ejemplo. Trata de deducir que hace cada cosa.
-      1.2 Copia el siguiente codigo entre el <nav> y el .jumbotron
-        <div id="Carousel" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#Carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#Carousel" data-slide-to="1"></li>
-          </ol>
+  <link rel="stylesheet" href="css/animate.css">
 
-          <div class="carousel-inner" role="listbox">
-            <div class="item active">
-              <div class="carousel-caption">
-              </div>
-            </div>
-            <div class="item">
-              <div class="carousel-caption">
-              </div>
-            </div>
+  <link rel="stylesheet" href="css/index.css">
 
-          </div>
-          <a class="left carousel-control" href="#Carousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#Carousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      1.3 Agrega cualquier texto de ejemplo de los dos .carousel-caption
-      1.4 En el ejemplo que les di sólo tienes 2 slides para el carousel. Trata de crear el tercero.
-        Tips: Analiza .carousel-indicators y ve que pasa si agregas uno más. Sigue la numeración
-              Recuerda que los slides deben de ir dentro de .carousel-inner en un div .item>.carousel-caption
-      1.5 Abre la consola y trata los siguientes comandos:
-          $('.carousel').carousel('next')
-          $('.carousel').carousel('pause')
-          $('.carousel').carousel(1)
-      Todos los elementos de JS de Bootstrap tienen eventos que podemos llamar y marcar como eventos usando jQuery.
+</head>
+<body data-spy="scroll" data-target="#scrollspy">
 
-      2. Modal
-      2.1 Ve a http://getbootstrap.com/javascript/#modals-related-target y copia el codigo html del ejemplo dentro del jumbotron. ¿Acaso funciona sólo el HTML sin el JS? ¿Dondé tendría que ir el JS?
-      2.2 Copia el código js del ejemplo en http://getbootstrap.com/javascript/#modals-related-target al final del body. Recuerda que primero necesitas cargas jQuery y el JS de Bootstrap. ¿Se necesita tener un $(document).ready()?
-      2.3 Corre $('#exampleModal').modal('show') en la consola y ve que sucede.
-      2.4 Trata de analizar el código que copiaste y agregar un nuevo boton que al presionarlo llene en el input de recipient @myname
 
-      3. Scrollspy
-      3.1 la documentación de scrollspy se encuentra en http://getbootstrap.com/javascript/#scrollspy. En este ejemplo vamos a activar Scroolspy por http://getbootstrap.com/javascript/#via-data-attributes-2. Para esto debemos de modificar el body así:
-        <body data-spy="scroll" data-target="#scrollspy">
-      3.2 Ahora vamos a modificar el <nav> y agregarle los siguientes <li> dentro del <ul> de clases "nav navbar-nav" para mostrarlos a la derecha del Brand
-          <li><a href="#Carousel">Carousel</a></li>
-          <li><a href="#Jumbotron">Jumbotron</a></li>
-          <li><a href="#MainContainer">MainContainer <span class="badge">42</span></a></li>
-          <li><a href="#Tabs">Tabs</a></li>
-      3.3 Para llamar a scrollspy debemos de poner id en cada elemento del DOM donde queremos que se active el evento. Por ejemplo: Si queremos que se active al llegar al Carousel debemos de agregarle al <div> del Carousel el id Carousel.
-        <div id="Carousel" class="carousel slide" data-ride="carousel">
-      Revisa que los elementos de Carousel, Jumbotron y el Main Container tengan sus ids.
-      3.4 Crea un nuevo .container abajo de #MainContainer. Este nuevo <div> debe de tener el #Tabs
-          Con Emmet puedes usar: #Tabs.container
+  <nav id="scrollspy" class="navbar navbar-default navbar-fixed-top navbar-inverse">
+    <div class="container">
 
-      4. Tabs
-      4.1 Dentro de #Tabs ve a http://getbootstrap.com/javascript/#markup y copia el ejemplo y agregale texto de muestra en cada uno de los .tab-pane
-      4.2 Ve como agregar el efecto de Fade (http://getbootstrap.com/javascript/#fade-effect) y agregalo.
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><img src="./Dragnusico.png" width="25" height="25" class = "animated bounce"></a>
+      </div>
 
-      5. Tooltip and Popover
-      5.1 Los Tooltips y Popovers son opcionales para Bootstrap y por temas de desempeño estan desactivados. Para activarlos agrega el siguiente codigo al final de body y de las llamadas de jQuery y el JS de Bootstrap. O usando el $(document).ready(function() {});
-        $(function () {
-          $('[data-toggle="tooltip"]').tooltip()
-        });
-
-        $(function () {
-          $('[data-toggle="popover"]').popover()
-        })
-      5.2 Copia el ejemplo en http://getbootstrap.com/javascript/#four-directions y agrega el codigo en el primer slide del carousel
-      5.3 Copia el ejemplo de http://getbootstrap.com/javascript/#popovers y agrega el codigo en el segundo slide del carousel
-      5.4 Ve el ejemplo en http://getbootstrap.com/javascript/#dismiss-on-next-click y agrega esa funcionalidad a los popovers
-
-    -->
-
-      <nav id="scrollspy" class="navbar navbar-default navbar-fixed-top navbar-inverse">
-        <div class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Brand</a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="bs-navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="#Carousel">Carousel</a></li>
-              <li><a href="#Jumbotron">Jumbotron</a></li>
-              <li><a href="#MainContainer">MainContainer <span class="badge">42</span></a></li>
-              <li><a href="#Tabs">Tabs</a></li>
+      <div class="collapse navbar-collapse" id="bs-navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#Carousel">Inicio</a></li>
+          <li><a href="#Jumbotron">Actualizacione</a></li>
+          <li><a href="#MainContainer"> Muro <span class="badge">1</span></a></li>
+          <a href="#Troll"></a>
+          <li><a href="#Tabs"> GG </a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mas <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="./404.html">Izi</a></li>
+              <li><a href="https://www.facebook.com/TGHMX?fref=ts">The Gaming House</a></li>
+              <li><a href="https://www.youtube.com/channel/UCa19emeQHuyF19L_CXNzVHw">Ic Skippy</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#Tabs">Contacto</a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Separated link</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-
-      <!--1 Carousel-->
-
-
-        <div id="Carousel" class="carousel slide" data-ride="carousel">
-
-        <ol class="carousel-indicators">
-          <li data-target="#Carousel" data-slide-to="0" class="active"></li>
-          <li data-target="#Carousel" data-slide-to="1"></li>
-          <li data-target="#Carousel" data-slide-to="2"></li>
-        </ol>
-
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            <div class="carousel-caption">
-              <h1>Tooltips :D</h1>
-              <p>Gupie Miranda</p>
-              <p>
-                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip izquierda</button>
-
-                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip arriba</button>
-
-                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip debajo</button>
-
-                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on derecha</button>
-              </p>
-            </div>
-          </div>
-          <div class="item">
-            <div class="carousel-caption">
-              <h1>Popovers :)</h1>
-              <p>Pagina Web </p>
-              <p>
-                <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-trigger="focus"  data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-                  Popover izquierda
-                </button>
-
-                <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-trigger="focus"  data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-                  Popover arriba
-                </button>
-
-                <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-trigger="focus"  data-placement="bottom" data-content="Vivamus
-                sagittis lacus vel augue laoreet rutrum faucibus.">
-                  Popover debajo
-                </button>
-
-                <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-trigger="focus"  data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-                  Popover derecha
-                </button>
-              </p>
-            </div>
-          </div>
-          
-          <div class="item">
-            <div class="carousel-caption">
-              <h1>:)</h1>
-              <p>Pagina Web 2</p>
-            </div>
-          </div>
-
-        </div>
-
-        <a class="left carousel-control" href="#Carousel" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#Carousel" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+          </li>
+        </ul>
       </div>
-
-      <div id="Jumbotron" class="jumbotron">
-        <div class="container">
-          <h1><span class="label label-default">New</span> Hello, world!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam cupiditate excepturi maxime! Nam voluptate, expedita ab alias, aut facilis id repellat vel placeat quae dignissimos consequuntur non! Dolorum, recusandae quis.</p>
-            <div class="alert alert-info" role="alert">
-              <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-            </div>
+    </div>
+  </nav>
 
 
-            <!--2  Modal-->
 
 
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@myname">Open modal for @myname</button>
+  <div id="Carousel" class="carousel slide" data-ride="carousel">
 
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="exampleModalLabel">New message</h4>
-                  </div>
-                  <div class="modal-body">
-                    <form>
-                      <div class="form-group">
-                        <label for="recipient-name" class="control-label">Recipient:</label>
-                        <input type="text" class="form-control" id="recipient-name">
-                      </div>
-                      <div class="form-group">
-                        <label for="message-text" class="control-label">Message:</label>
-                        <textarea class="form-control" id="message-text"></textarea>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Send message</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <ol class="carousel-indicators">
+      <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#Carousel" data-slide-to="1"></li>
+      <li data-target="#Carousel" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img class="img-responsive" alt="Responsive image" src="./img/Gupielogo.jpg"width="1240" height="576">
+        <div class="carousel-caption">
+          <p>
+            <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="left" title="Proximamente">Facebook</button>
+
+            <a type="button" class="btn btn-info activate" data-toggle="tooltip" data-placement="top" title="@GupieMiranda" href="https://twitter.com/GupieMiranda">Twitter</a>
+
+            <a type="button" class="btn btn-warning" data-toggle="tooltip" data-placement="right" title="Da click" href="https://github.com/Gupie21">Github</a>
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <img class="img-responsive" alt="Responsive image" src="./img/riven.jpg"width="1240" height="auto">
+        <div class="carousel-caption">
+          <h1>Armeria</h1>
+          <p>Zona de runas y maestrias</p>
+          <p>
+            <a type="button" class="btn btn-success" data-container="body" data-toggle="popover" data-trigger="focus"  data-placement="top" data-content="Algunos consejos útiles" href="Armeria.html#Pro">
+              Pro Tips
+            </a>
+
+            <a type="button" class="btn btn-danger" data-container="body" data-toggle="popover" data-trigger="focus"  data-placement="bottom" data-content="Subscribete a mi canal" href="https://www.youtube.com/channel/UCn9wkn4HzxwFoYUavtY6ILw">
+              Youtube
+            </a>
+
+            <a type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="focus"  data-placement="right" data-content="Zona del trolleo." href="#Troll">
+              Troll
+            </a>
+          </p>
         </div>
       </div>
 
-      <div id="MainContainer" class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <h2>This First Heading
-              <span class="text-muted">Will Catch Your Eye</span>
-            </h2>
-            <p class="lead">  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nostrum iusto minus, similique. Non qui ipsa quae deleniti illo! Culpa, at facere iusto quia inventore nisi, doloribus dolores praesentium natus.</p>
-
-          </div>
-          <div class="col-md-4">
-            <img class="img-circle img-responsive" src="http://placehold.it/300x300">
-          </div>
-
-          <hr class="col-md-12 featurette-divider">
-          <div class="col-md-4">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/M01rsp80LCk?list=PLwlY699Z9ioV_EkKRPx1GzI4RgNH4w2OP" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="col-md-8">
-            <h2>The Second Heading <small>Is Pretty Cool Too.</small></h2>
-            <dl class="dl-horizontal text-center">
-              <dt>Lorem ipsum.</dt>
-              <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quasi, officia dolores accusantium corrupti delectus.</dd>
-              <dt>Lorem ipsum.</dt>
-              <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quasi, officia dolores accusantium corrupti delectus.</dd>
-              <dt>Lorem ipsum.</dt>
-              <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe quasi, officia dolores accusantium corrupti delectus.</dd>
-            </dl>
-          </div>
-
-          <hr class="col-md-12 featurette-divider">
-          <div class="col-md-8">
-            <div class="row">
-              <div class="col-md-4">
-                <blockquote>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                  <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                </blockquote>
-              </div>
-              <div class="col-md-4 col-md-offset-4">
-                <blockquote class="blockquote-reverse">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                  <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                </blockquote>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <address>
-              <strong>Twitter, Inc.</strong><br>
-              795 Folsom Ave, Suite 600<br>
-              San Francisco, CA 94107<br>
-              <abbr title="Phone">P:</abbr> (123) 456-7890
-            </address>
-
-            <address>
-              <strong>Full Name</strong><br>
-              <a href="mailto:#">first.last@example.com</a>
-            </address>
-          </div>
-
-          <hr class="col-md-12 featurette-divider">
-          <div class="col-md-6">
-            <table class="table table-hover table-responsive">
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>Name</th>
-                      <th>LastName</th>
-                      <th>Twitter</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Arturo</td>
-                      <td>Miranda</td>
-                      <td>@gupie</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                  </tbody>
-                </table>
-          </div>
-          <div class="col-md-6">
-            <form class="form-horizontal">
-              <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-                <div class="col-sm-10">
-                  <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-                <div class="col-sm-10">
-                  <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox"> Remember me
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <button type="submit" class="btn btn-default">Sign in</button>
-                </div>
-              </div>
-            </form>
-          </div>
-
-          <hr class="col-md-12 featurette-divider">
+      <div class="item">
+        <img class="img-responsive" alt="Responsive image" src="./img/Proxi.jpg"width="1240" height="auto">
+        <div class="carousel-caption">
+          <h1>Gupie</h1>
+          <p>Loading...</p>
         </div>
       </div>
-      <!-- /.container -->
 
-      <!--4-->
+    </div>
+
+    <a class="left carousel-control" href="#Carousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#Carousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <img src="http://pabloleone.com/wp-content/uploads/2013/07/under_construction_border.png" style ="width: 200px;height: 200px; right:200px;" align = "right"> 
+</img>
 
 
-      <div id="Tabs" class="container">
+
+<div id="Jumbotron" class="jumbotron">
+  <div class="container">
+    <h2><span class="label label-success">New</span> Bienvenidos!</h2>
+    <p>Este sitio es creado con fines educativos y personales con el fin de ayudar a la comunidad amateur de League of Legends, así como para promover el entretenimiento mediante esta página y un canal de youtube, espero se diviertan, ¡POR DEMACIA!</p>
+    <div class="alert alert-info" role="alert">
+      <strong>Ultima actualización 1.0</strong> Creación de la pagina, proyecto en proceso....
+    </div>
+  </div>
+</div>
+
+<div id="MainContainer" class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h2>Comencemos
+        <span class="text-muted">Armeria</span>
+      </h2>
+      <p class="lead"> ¿No sabes que armar o equiparte para tu campeón? ¡¡Encontraste el lugar adecuado!!, este lugar te servira para checar algunas builds que investigamos, creamos o adaptamos para ayudar a la comunidad.</p>
+
+    </div>
+    <div class="col-md-4">
+      <a href="Armeria.html"><img class="img-circle img-responsive" src="http://tr.leagueoflegends.com/sites/default/files/styles/scale_xlarge/public/upload/runes_img_1.jpg?itok=NGgOFeTV"></a>
+    </div>
+
+    <hr class="col-md-12 featurette-divider">
+    <div class="col-md-4" id="Troll">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/iH7J3BRMklc" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/iH7J3BRMklc" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <h2>Zona del Trolleo <small>Solo por hoy música</small></h2>
+      <dl class="dl-horizontal text-center">
+        <dt>Recomendación de música</dt>
+        <dd>Algo de electrónica para relajarse y salir a feedear</dd>
+        <dt>Recomendación de música</dt>
+        <dd>Algo de electrónica para relajarse y salir a feedear</dd>
+        <dt>Recomendación de música</dt>
+        <dd>Algo de electrónica para relajarse y salir a feedear</dd>
+      </dl>
+    </div>
+
+    <hr class="col-md-12 featurette-divider">
+
+    <div class="col-md-8">
       <div class="row">
-        <div class="col-md-12">
-          <div>
+        <h2><small>Reflexiones bronces del día</small></h2>
+        <div class="col-md-4">
+          <blockquote>
+            <p>Tipico bronce que piensa que las asistencias valen menos que las kills</p>
+            <footer>Alguien bronce...<cite title="Source Title">Aram</cite></footer>
+          </blockquote>
+        </div>
+        <div class="col-md-4 col-md-offset-4">
+          <blockquote class="blockquote-reverse">
+            <p>El no es malo, la culpa de que sea noob siempre es el jungla o del lag</p>
+            <footer>Noob <cite title="Source Title">Grieta del invocador</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
 
-            <!-- Nav tabs -->
-            <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">TAB1</a></li>
-              <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">TAB2</a></li>
-              <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">TAB3</a></li>
-              <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">TAB4</a></li>
-            </ul>
+    <hr class="col-md-12 featurette-divider">
+    <div class="col-md-4">
+      <address>
+        <strong>Contacto</strong><br>
+        Cuenta smurf: Gorditodelmal<br>
+        Cuenta normal: Gupie<br>
+        <abbr title="Phone">P:</abbr> Ragnarok Studios
+      </address>
 
-            <div class="tab-content">
-              <div role="tabpanel" class="tab-pane fade in active" id="home">
-                Holocon
-              </div>
-              <div role="tabpanel" class="tab-pane fade" id="profile">
-                :C
-              </div>
-              <div role="tabpanel" class="tab-pane fade" id="messages">
-                qeqwewqeq
-              </div>
-              <div role="tabpanel" class="tab-pane fade" id="settings">
-                qeweqweqwerqgerg
-              </div>
-            </div>
+      <address>
+        <strong>Creado por: Gupie Miranda</strong><br>
+        <a href="mailto:gupie27@gmail.com">gupie27@gmail.com</a>
+      </address>
+    </div>
+    <hr class="col-md-12 featurette-divider">
+  </div>
+</div>
 
+
+
+<div id="Tabs" class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div>
+
+
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Mensaje a la comunidad</a></li>
+          <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Proximamente</a></li>
+          <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Enlaces externos</a></li>
+        </ul>
+
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in active" id="home">
+            Gracias a todos los lectores, espero les guste este proyecto, si no pos like, manita arriba y subscribanse a mi canal :D.
           </div>
-          <hr class="col-md-12 featurette-divider">
+          <div role="tabpanel" class="tab-pane fade" id="profile">
+            Esperalo pronto
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="settings">
+            <h1><a href="http://polvora.com.mx/">Polvora Rock</a></h1>
+            Si quieres conocer mas acerca de la cultura Rock en México te recomiendo esta revista digital, donde podras encontrar una nueva propuesta mexicana sobre éste genero de música así tambien como reseñas de videojuegos, eventos y mucho mas, ¿qué esperas?¡Entra ya!.
+          </div>
         </div>
+
       </div>
-      </div>
+      <hr class="col-md-12 featurette-divider">
+    </div>
+  </div>
+</div>
 
 
-      <footer class="container">
-        <div>
-          <p>Copyright &copy; Your Website 2015</p>
-        </div>
-      </footer>
+<footer class="container">
+  <div>
+    <p>Copyright &copy; gupie.com 2015</p>
+  </div>
+</footer>
 
-    </body>
-    <!--
-      Pro Tip 1: Si pones los scripts al final del documento html la página carga más rápido
-      Pro Tip 2: Bootstrap necesita de jQuery para funcionar. Nunca se te olvide ponerlo.
-      -->
+</body>
 
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-    <!-- New Scripts -->
-    <script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-
-
-    $(document).ready(function() {
-      $('#exampleModal').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget) // Button that triggered the modal
-        var recipient = button.data('whatever') // Extract info from data-* attributes
-        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-        var modal = $(this)
-        modal.find('.modal-title').text('New message to ' + recipient)
-        modal.find('.modal-body input').val(recipient)
-        $('.carousel').carousel({
-        pause: "table-hover"
-        })
-      });
-
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-      });
-
-      $(function () {
-        $('[data-toggle="popover"]').popover()
-      })
-    });
-    </script>
-    </html>
+<script src="js/index.js">
+</script>
+</html>
