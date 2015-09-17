@@ -24,8 +24,12 @@
         .featurette-divider {
           margin: 80px 0;
         }
+
         img, img.img-responsive {
             margin: 0 auto;
+        }
+        img{
+          max-width: 100%;
         }
         .carousel .item {
             height: 500px;
