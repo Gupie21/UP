@@ -28,12 +28,13 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html"><img src="./Dragnusico.png" width="25" height="25" class = "animated bounce"></a>
+            <a class="navbar-brand" href="index.html"><img src="./Dragnusico.png" width="25" height="25" class = "animated bounce" class="animated" id="logo" data-toggle="tooltip" data-placement="right" title="Inicio"></a>
           </div>
 
           <div class="collapse navbar-collapse" id="bs-navbar-collapse">
             <ul class="nav navbar-nav">
-              <li><a href="#Nuevo">Inicio</a></li>
+              <li><a href="Armeria.html">Armería</a></li>
+              <li><a href="#Nuevo">Lo nuevo</a></li>
               <li><a href="#Muro"> Muro </a></li>
               <a href="#Pro"></a>
               <li><a href="#GG"> GG </a></li>
@@ -127,15 +128,44 @@
           <div>
 
             <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Videos de ayuda</a></li>
+              <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Complementos</a></li>
               <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Mestrias y Runas</a></li>
               <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Agradecimientos</a></li>
             </ul>
 
             <div class="tab-content">
               <div role="tabpanel" class="tab-pane fade in active" id="home">
-                Aqui va carousel videos
-              </div>
+
+                <div id="amazingcarousel-container-1">
+                  <div id="amazingcarousel-1" style="display:none;position:relative;width:100%;max-width:250px;margin:0px auto 0px;">
+                    <div class="amazingcarousel-list-container">
+                      <ul class="amazingcarousel-list">
+                        <li class="amazingcarousel-item">
+                          <div class="amazingcarousel-item-container">
+                            <div class="amazingcarousel-image"><a href="http://www.youtube.com/embed/IGuutvWSRbc" title="Un video más especìfico"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/IGuutvWSRbc.jpg"  alt="Un video más especìfico" /></a></div>                    </div>
+                          </li>
+                          <li class="amazingcarousel-item">
+                            <div class="amazingcarousel-item-container">
+                              <div class="amazingcarousel-image"><a href="http://es.leagueoflegends.wikia.com/wiki/Viktor" title="Wikia del Campeón"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/creator-viktor-splash - copia.jpg"  alt="Wikia del Campeón" /></a></div>                    </div>
+                            </li>
+                            <li class="amazingcarousel-item">
+                              <div class="amazingcarousel-item-container">
+                                <div class="amazingcarousel-image"><a href="http://www.youtube.com/embed/DpQXCtCI0xo" title="Jugadas Pro"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/DpQXCtCI0xo.jpg"  alt="Jugadas Pro" /></a></div>                    </div>
+                              </li>
+                              <li class="amazingcarousel-item">
+                                <div class="amazingcarousel-item-container">
+                                  <div class="amazingcarousel-image"><a href="http://www.salsalol.com/campeones/viktor" title="Mas Builds"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/runes_img_1.jpg"  alt="Mas Builds" /></a></div>                    </div>
+                                </li>
+                              </ul>
+                              <div class="amazingcarousel-prev"></div>
+                              <div class="amazingcarousel-next"></div>
+                            </div>
+                            <div class="amazingcarousel-nav"></div>
+                            <div class="amazingcarousel-engine"><a href="http://amazingcarousel.com">jQuery Scroller</a></div>
+                          </div>
+                        </div>
+                      </div>
+
               <div role="tabpanel" class="tab-pane fade" id="profile">
                 Proximamente
               </div>
@@ -161,5 +191,5 @@
 <script src="carouselengine/jquery.js"></script>
 <script src="carouselengine/amazingcarousel.js"></script>
 <script src="carouselengine/initcarousel-1.js"></script>
-
+<script src="js/builds.js"></script>
 </html>
